@@ -27,7 +27,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setUpPageControl()
         setUpScreen(index: currentPage)
-   
+        setUpGestures()
+        
     }
     
     //MARK:Helpers
@@ -39,10 +40,18 @@ class ViewController: UIViewController {
         titleLabel.text = items[index].title
         detailLabel.text = items[index].detail
         pageControl.currentPage = index
+        titleLabel.alpha = 1.0
+        detailLabel.alpha = 1.0
+        titleLabel.transform = .identity
+        detailLabel.transform = .identity
     }
     private func setUpGestures() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTapAnimation))
         view.addGestureRecognizer(tap)
+    }
+    
+    private func isOverLastItem() -> Bool {
+        return currentPage == self.items.count
     }
     
     //MARK:Actions
@@ -50,37 +59,45 @@ class ViewController: UIViewController {
     //옆으로 이동했다가 위로 사라지는 애니메이션
     @objc private func handleTapAnimation(){
         //타이틀레이블
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut) {
+  
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut,animations: {
             self.titleLabel.alpha = 0.8
             self.titleLabel.transform = CGAffineTransform(translationX: -30, y: 0)
-            
-        } completion: { _ in
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut) {
+        }) { _ in
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut,animations: {
                 self.titleLabel.alpha = 0.0
                 self.titleLabel.transform = CGAffineTransform(translationX: 0, y: -550)
-                
-            }
+            },completion: nil)
         }
         //디테일레이블
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut) {
+        UIView.animate(withDuration: 0.5, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut,animations: {
             self.detailLabel.alpha = 0.8
             self.detailLabel.transform = CGAffineTransform(translationX: -30, y: 0)
-            
-        } completion: { _ in
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut) {
+        }) { _ in
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut,animations: {
                 self.detailLabel.alpha = 0.0
                 self.detailLabel.transform = CGAffineTransform(translationX: 0, y: -550)
-            } completion: { _ in
+            }) { _ in
                 self.currentPage += 1
-                self.titleLabel.alpha = 1.0
-                self.detailLabel.alpha = 1.0
-                self.titleLabel.transform = .identity
-                self.detailLabel.transform = .identity
-                self.setUpScreen(index: self.currentPage)
+                if self.isOverLastItem() {
+                    self.showMainApp()
+                }else{
+                    self.setUpScreen(index: self.currentPage)
+                }
             }
-
         }
 
+    }
+    
+    private func showMainApp() {
+        //MainAppViewController
+        let mainAppViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MainAppViewController")
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let sceneDelegate = windowScene.delegate as? SceneDelegate,
+           let window = sceneDelegate.window {
+            window.rootViewController = mainAppViewController
+            UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        }
     }
     
 

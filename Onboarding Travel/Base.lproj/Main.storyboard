@@ -91,6 +91,33 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="msv-LK-JNw">
+            <objects>
+                <viewController storyboardIdentifier="MainAppViewController" id="2Cj-Kx-MZB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0QB-N0-YRC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBy-0O-jd1">
+                                <rect key="frame" x="171" y="437.5" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="brw-4p-eR7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fBy-0O-jd1" firstAttribute="centerX" secondItem="0QB-N0-YRC" secondAttribute="centerX" id="Usl-TX-JzQ"/>
+                            <constraint firstItem="fBy-0O-jd1" firstAttribute="centerY" secondItem="0QB-N0-YRC" secondAttribute="centerY" id="iIs-Js-QY5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GtL-2o-6Hz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="901" y="115"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
