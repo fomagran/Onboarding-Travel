@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Onboarding_Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7mR-Ob-jQx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mik-vf-kBn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="iKt-Zn-e2r">
+                                        <rect key="frame" x="146" y="847.5" width="122.5" height="27.5"/>
+                                    </pageControl>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7o-7h-sIR">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="839.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gSx-JC-21W">
+                                                <rect key="frame" x="36" y="374" width="342" height="91.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travel Your Way" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXl-KH-TdV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="215" height="31.5"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore thousands of hotels and find the perfect accomodation!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlU-QW-sDb">
+                                                        <rect key="frame" x="0.0" y="39.5" width="337.5" height="52"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="gSx-JC-21W" secondAttribute="trailing" constant="36" id="0zQ-1P-U9Q"/>
+                                            <constraint firstItem="gSx-JC-21W" firstAttribute="centerY" secondItem="z7o-7h-sIR" secondAttribute="centerY" id="Si7-kj-3Xt"/>
+                                            <constraint firstItem="gSx-JC-21W" firstAttribute="leading" secondItem="z7o-7h-sIR" secondAttribute="leading" constant="36" id="XE2-hk-Wah"/>
+                                            <constraint firstItem="gSx-JC-21W" firstAttribute="centerX" secondItem="z7o-7h-sIR" secondAttribute="centerX" id="Y0v-yQ-3Dk"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="iKt-Zn-e2r" secondAttribute="bottom" constant="21" id="Bu2-1o-REo"/>
+                                    <constraint firstItem="iKt-Zn-e2r" firstAttribute="centerX" secondItem="Mik-vf-kBn" secondAttribute="centerX" id="OOx-IE-XHT"/>
+                                    <constraint firstItem="z7o-7h-sIR" firstAttribute="top" secondItem="Mik-vf-kBn" secondAttribute="top" id="Ofj-xA-JjV"/>
+                                    <constraint firstAttribute="trailing" secondItem="z7o-7h-sIR" secondAttribute="trailing" id="Tdt-ZL-Dtr"/>
+                                    <constraint firstItem="z7o-7h-sIR" firstAttribute="leading" secondItem="Mik-vf-kBn" secondAttribute="leading" id="fH1-Fd-K7h"/>
+                                    <constraint firstItem="iKt-Zn-e2r" firstAttribute="top" secondItem="z7o-7h-sIR" secondAttribute="bottom" constant="8" symbolic="YES" id="lBI-8N-4Rf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7mR-Ob-jQx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Aw3-Vd-pQ1"/>
+                            <constraint firstItem="Mik-vf-kBn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Gmo-Xu-L1r"/>
+                            <constraint firstItem="Mik-vf-kBn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HQy-wz-R4s"/>
+                            <constraint firstAttribute="bottom" secondItem="Mik-vf-kBn" secondAttribute="bottom" id="a5f-ix-lag"/>
+                            <constraint firstItem="Mik-vf-kBn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d3F-1H-KyU"/>
+                            <constraint firstAttribute="bottom" secondItem="7mR-Ob-jQx" secondAttribute="bottom" id="gwK-zQ-fxt"/>
+                            <constraint firstItem="7mR-Ob-jQx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mof-Y1-HxG"/>
+                            <constraint firstItem="7mR-Ob-jQx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uYN-i6-dt0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="DarkView" destination="Mik-vf-kBn" id="gHL-WM-bl4"/>
+                        <outlet property="bgImageView" destination="7mR-Ob-jQx" id="Pop-qV-Cli"/>
+                        <outlet property="detailLabel" destination="tlU-QW-sDb" id="TDF-vr-Udi"/>
+                        <outlet property="pageControl" destination="iKt-Zn-e2r" id="YAy-Pd-2RL"/>
+                        <outlet property="titleLabel" destination="DXl-KH-TdV" id="xL7-ZD-UKt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
