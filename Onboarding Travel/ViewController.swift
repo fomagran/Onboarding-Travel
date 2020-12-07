@@ -15,10 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var DarkView: UIView!
     @IBOutlet weak var bgImageView: UIImageView!
     private let items:[OnboardingItem] = [
-        .init(title: "Travel Your Way", detail: "Travel the world by air,rail or sea at the most competitive prices", bgImage: nil),
-            .init(title: "Stay Your Way", detail: "With over millions of hotels worldwide,find the perfect accomodation in the most amazing places!", bgImage: nil),
-        .init(title: "Discover Your Way With New Features", detail: "Explore exotic destinations with our new features that link you to like-minded tavellers", bgImage: nil),
-        .init(title: "Feast Your Way", detail: "We recommend you local cuisines that ar safe and highly recommended by the locals", bgImage: nil)
+        .init(title: "Travel Your Way", detail: "Travel the world by air,rail or sea at the most competitive prices", bgImage: #imageLiteral(resourceName: "imTravel1")),
+            .init(title: "Stay Your Way", detail: "With over millions of hotels worldwide,find the perfect accomodation in the most amazing places!", bgImage: #imageLiteral(resourceName: "imTravel3")),
+        .init(title: "Discover Your Way With New Features", detail: "Explore exotic destinations with our new features that link you to like-minded tavellers", bgImage: #imageLiteral(resourceName: "imTravel2")),
+        .init(title: "Feast Your Way", detail: "We recommend you local cuisines that ar safe and highly recommended by the locals", bgImage: #imageLiteral(resourceName: "imTravel4"))
     ]
     private var currentPage:Int = 0
     
@@ -27,7 +27,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setUpPageControl()
         setUpScreen(index: currentPage)
+        updateBackgroundImage(index: currentPage)
         setUpGestures()
+        setUpView()
         
     }
     
@@ -50,6 +52,17 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
+    private func updateBackgroundImage(index:Int) {
+        let image = items[index].bgImage
+        bgImageView.image = image
+        UIView.transition(with: bgImageView, duration: 0.5, options: .transitionCrossDissolve,animations: {
+            self.bgImageView.image = image
+        },completion: nil)
+    }
+    
+    private func setUpView() {
+        DarkView.backgroundColor = UIColor.init(white: 0.1, alpha: 0.5)
+    }
     private func isOverLastItem() -> Bool {
         return currentPage == self.items.count
     }
@@ -74,6 +87,9 @@ class ViewController: UIViewController {
             self.detailLabel.alpha = 0.8
             self.detailLabel.transform = CGAffineTransform(translationX: -30, y: 0)
         }) { _ in
+            if self.currentPage < self.items.count - 1 {
+            self.updateBackgroundImage(index: self.currentPage + 1)
+            }
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut,animations: {
                 self.detailLabel.alpha = 0.0
                 self.detailLabel.transform = CGAffineTransform(translationX: 0, y: -550)
