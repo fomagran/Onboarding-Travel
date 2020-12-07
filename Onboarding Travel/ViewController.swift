@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         .init(title: "Discover Your Way With New Features", detail: "Explore exotic destinations with our new features that link you to like-minded tavellers", bgImage: nil),
         .init(title: "Feast Your Way", detail: "We recommend you local cuisines that ar safe and highly recommended by the locals", bgImage: nil)
     ]
-    private let currentPage:Int = 0
+    private var currentPage:Int = 0
     
     //MARK:LifeCycle
     override func viewDidLoad() {
@@ -50,28 +50,35 @@ class ViewController: UIViewController {
     //옆으로 이동했다가 위로 사라지는 애니메이션
     @objc private func handleTapAnimation(){
         //타이틀레이블
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseOut) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut) {
             self.titleLabel.alpha = 0.8
             self.titleLabel.transform = CGAffineTransform(translationX: -30, y: 0)
             
         } completion: { _ in
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseOut) {
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut) {
                 self.titleLabel.alpha = 0.0
                 self.titleLabel.transform = CGAffineTransform(translationX: 0, y: -550)
                 
             }
         }
         //디테일레이블
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseOut) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut) {
             self.detailLabel.alpha = 0.8
             self.detailLabel.transform = CGAffineTransform(translationX: -30, y: 0)
             
         } completion: { _ in
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseOut) {
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut) {
                 self.detailLabel.alpha = 0.0
                 self.detailLabel.transform = CGAffineTransform(translationX: 0, y: -550)
-                
+            } completion: { _ in
+                self.currentPage += 1
+                self.titleLabel.alpha = 1.0
+                self.detailLabel.alpha = 1.0
+                self.titleLabel.transform = .identity
+                self.detailLabel.transform = .identity
+                self.setUpScreen(index: self.currentPage)
             }
+
         }
 
     }
