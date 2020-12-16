@@ -134,7 +134,7 @@
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WOZ-Mm-Dxv">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="772"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZFy-hC-UwN">
                                             <size key="itemSize" width="411" height="632"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -197,7 +197,7 @@
                                                         <constraint firstAttribute="trailing" secondItem="3jc-o7-P7u" secondAttribute="trailing" id="vTF-f1-K8p"/>
                                                     </constraints>
                                                 </collectionViewCellContentView>
-                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="customSize" width="411" height="632"/>
                                                 <connections>
                                                     <outlet property="detail" destination="Cj3-q9-v2A" id="rZv-S4-AeM"/>
@@ -211,7 +211,7 @@
                                         </connections>
                                     </collectionView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="WOZ-Mm-Dxv" firstAttribute="top" secondItem="FTX-ZC-kFc" secondAttribute="top" id="1Iw-Qc-CfG"/>
                                     <constraint firstItem="WOZ-Mm-Dxv" firstAttribute="leading" secondItem="FTX-ZC-kFc" secondAttribute="leading" id="2Bf-Ul-w2Z"/>
@@ -236,6 +236,7 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="WOZ-Mm-Dxv" id="EKo-tt-6f2"/>
+                        <outlet property="containerView" destination="FTX-ZC-kFc" id="wdG-A1-PFC"/>
                         <outlet property="nextBtn" destination="afb-Zy-ZdD" id="jR5-dT-8Ze"/>
                         <outlet property="pageControl" destination="eS6-mG-cN1" id="u6m-RQ-RYx"/>
                     </connections>
@@ -279,9 +280,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

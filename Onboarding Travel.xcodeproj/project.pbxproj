@@ -79,7 +79,6 @@
 				04CE0E5A2574A8F90048846C /* Assets.xcassets */,
 				04CE0E5C2574A8F90048846C /* LaunchScreen.storyboard */,
 				04CE0E5F2574A8F90048846C /* Info.plist */,
-				04A3A7FF257F373800424D71 /* FashionViewController.swift */,
 			);
 			path = "Onboarding Travel";
 			sourceTree = "<group>";
@@ -95,6 +94,7 @@
 		04D2A0E0257DEC4D00FA97B9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04A3A7FF257F373800424D71 /* FashionViewController.swift */,
 				04CE0E552574A8F80048846C /* TravelViewController.swift */,
 			);
 			path = Controller;
