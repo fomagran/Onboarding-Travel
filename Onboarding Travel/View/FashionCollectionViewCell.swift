@@ -7,8 +7,12 @@
 
 import UIKit
 
+protocol FashionCollectionViewCellDelegate:class {
+    func didTapExploreButton()
+}
+
 class FashionCollectionViewCell: UICollectionViewCell {
-    
+    weak var delegate:FashionCollectionViewCellDelegate?
     @IBOutlet weak var exploreButton: UIButton!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var detail: UILabel!
@@ -20,5 +24,8 @@ class FashionCollectionViewCell: UICollectionViewCell {
     
     func showExploreButton(shouldShow:Bool) {
         exploreButton.isHidden = !shouldShow
+    }
+    @IBAction func handleExploreButton(_ sender: Any) {
+        delegate?.didTapExploreButton()
     }
 }

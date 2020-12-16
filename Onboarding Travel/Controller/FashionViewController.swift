@@ -114,6 +114,7 @@ extension FashionViewController:UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collection.dequeueReusableCell(withReuseIdentifier: "FashionCollectionViewCell", for: indexPath) as! FashionCollectionViewCell
+        cell.delegate = self
         let item = items[indexPath.item]
         let shouldShow = indexPath.item == items.count - 1
         cell.showExploreButton(shouldShow: shouldShow)
@@ -131,5 +132,17 @@ extension FashionViewController:UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-    
+}
+//MARK:FashionCollectionViewCellDelegate
+extension FashionViewController:FashionCollectionViewCellDelegate {
+    func didTapExploreButton() {
+        //MainAppViewController로 이동하기
+        let mainAppViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MainViewController")
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let sceneDelegate = windowScene.delegate as? SceneDelegate,
+           let window = sceneDelegate.window {
+            window.rootViewController = mainAppViewController
+            UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        }
+    }
 }
