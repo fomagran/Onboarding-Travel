@@ -22,9 +22,15 @@ class HolidayViewController: UIViewController {
     //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
         setUpPlayerIfNeeded()
         restartVideo()
         observeVideoEvents()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        removeVideoEventSubscribers()
+        removePlayer()
     }
     
     override func viewDidLayoutSubviews() {
@@ -37,7 +43,6 @@ class HolidayViewController: UIViewController {
         dartkView.backgroundColor = UIColor(white: 0.1, alpha: 0.4)
     }
 
-    
     private func setPlayer() -> AVPlayer? {
         guard let filePath = Bundle.main.path(forResource: "bg_video", ofType: "mp4") else { return nil }
         let url = URL(fileURLWithPath: filePath)
@@ -57,6 +62,10 @@ class HolidayViewController: UIViewController {
         player?.play()
     }
     
+    private func pauseVideo() {
+        player?.pause()
+    }
+    
     private func restartVideo() {
         player?.seek(to: .zero)
         playVideo()
@@ -70,11 +79,37 @@ class HolidayViewController: UIViewController {
         }
     }
     
+    
+    private func removePlayer() {
+        player?.pause()
+        player = nil
+        playerLayer?.removeFromSuperlayer()
+        playerLayer = nil
+    }
+    
+    //MARK:Combine Functions
+    
     //무한반복 하게 하기
     private func observeVideoEvents() {
         NotificationCenter.default.publisher(for: .AVPlayerItemDidPlayToEndTime).sink { [weak self]_ in
             self?.restartVideo()
         }.store(in: &videoEventSubscribers)
+        
+        //앱이 인액티브상태가 될때
+        NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification).sink { [weak self]_ in
+            self?.pauseVideo()
+        }.store(in: &videoEventSubscribers)
+        //앱이 다시 액티브 상태가 될때
+        NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification).sink { [weak self]_ in
+            self?.playVideo()
+        }.store(in: &videoEventSubscribers)
+    }
+    
+    //서브스크라이버 없애기
+    private func removeVideoEventSubscribers() {
+        videoEventSubscribers.forEach { subscriber in
+            subscriber.cancel()
+        }
     }
     
     
