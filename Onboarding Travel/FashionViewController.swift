@@ -19,10 +19,15 @@ class FashionViewController: UIViewController {
         super.viewDidLoad()
         setUpCollectionView()
         setUpItems()
+        setUpPageControl()
         
     }
     
     //MARK:Helpers
+    
+    private func setUpPageControl() {
+        pageControl.numberOfPages = items.count
+    }
     
     private func setUpItems() {
         items = OnboardingItem.fashionItems
@@ -33,9 +38,22 @@ class FashionViewController: UIViewController {
         collection.collectionViewLayout = layout
     }
     
+    private func showItem(at index:Int) {
+        pageControl.currentPage = index
+    }
+    
+    //현재 인덱스 알아내기 -> new
+    private func getCurrentIndex() -> Int {
+        return Int(collection.contentOffset.x/collection.frame.width)
+    }
+    
     //MARK:Actions
     @IBAction func handleNextButton(_ sender: Any) {
-        
+        let nextRow = getCurrentIndex() + 1
+        let nextIndexPath = IndexPath(row: nextRow, section: 0)
+        //왼쪽으로 스크롤되게 하기 - new
+        collection.scrollToItem(at: nextIndexPath, at: .left, animated: true)
+        showItem(at: nextRow)
     }
     
 }
