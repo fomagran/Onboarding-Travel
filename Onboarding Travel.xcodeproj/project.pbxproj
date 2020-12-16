@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04A3A800257F373800424D71 /* FashionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3A7FF257F373800424D71 /* FashionViewController.swift */; };
-		04A3A804257F3FBF00424D71 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3A803257F3FBE00424D71 /* CollectionViewCell.swift */; };
+		04A3A804257F3FBF00424D71 /* FashionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3A803257F3FBE00424D71 /* FashionCollectionViewCell.swift */; };
 		04CE0E522574A8F80048846C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE0E512574A8F80048846C /* AppDelegate.swift */; };
 		04CE0E542574A8F80048846C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE0E532574A8F80048846C /* SceneDelegate.swift */; };
 		04CE0E562574A8F80048846C /* TravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE0E552574A8F80048846C /* TravelViewController.swift */; };
@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		04A3A7FF257F373800424D71 /* FashionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FashionViewController.swift; sourceTree = "<group>"; };
-		04A3A803257F3FBE00424D71 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		04A3A803257F3FBE00424D71 /* FashionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FashionCollectionViewCell.swift; sourceTree = "<group>"; };
 		04CE0E4E2574A8F80048846C /* Onboarding Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Onboarding Travel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CE0E512574A8F80048846C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04CE0E532574A8F80048846C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		04A3A802257F3F9E00424D71 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				04A3A803257F3FBE00424D71 /* CollectionViewCell.swift */,
+				04A3A803257F3FBE00424D71 /* FashionCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -172,7 +172,7 @@
 			files = (
 				04CE0E562574A8F80048846C /* TravelViewController.swift in Sources */,
 				04D2A0DC257DDA8E00FA97B9 /* OnboardingItem.swift in Sources */,
-				04A3A804257F3FBF00424D71 /* CollectionViewCell.swift in Sources */,
+				04A3A804257F3FBF00424D71 /* FashionCollectionViewCell.swift in Sources */,
 				04CE0E522574A8F80048846C /* AppDelegate.swift in Sources */,
 				04CE0E542574A8F80048846C /* SceneDelegate.swift in Sources */,
 				04A3A800257F373800424D71 /* FashionViewController.swift in Sources */,

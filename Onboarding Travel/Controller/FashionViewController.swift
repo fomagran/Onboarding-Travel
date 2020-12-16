@@ -62,6 +62,8 @@ class FashionViewController: UIViewController {
     
     private func showItem(at index:Int) {
         pageControl.currentPage = index
+        let shouldHide = index == items.count - 1
+        nextBtn.isHidden = shouldHide
     }
     
     //현재 인덱스 알아내기 -> new
@@ -111,8 +113,10 @@ extension FashionViewController:UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collection.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
+        let cell = collection.dequeueReusableCell(withReuseIdentifier: "FashionCollectionViewCell", for: indexPath) as! FashionCollectionViewCell
         let item = items[indexPath.item]
+        let shouldShow = indexPath.item == items.count - 1
+        cell.showExploreButton(shouldShow: shouldShow)
         cell.configure(with: item)
         return cell
     }

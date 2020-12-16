@@ -7,13 +7,18 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+class FashionCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var exploreButton: UIButton!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var detail: UILabel!
     
     func configure(with item:OnboardingItem) {
         title.text = item.title
         detail.text = item.detail
+    }
+    
+    func showExploreButton(shouldShow:Bool) {
+        exploreButton.isHidden = !shouldShow
     }
 }
