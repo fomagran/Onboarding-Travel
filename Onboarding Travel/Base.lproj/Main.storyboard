@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="73X-Dd-ZpD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -323,6 +323,7 @@
                             <constraint firstAttribute="bottom" secondItem="fRa-Fl-0yv" secondAttribute="bottom" id="uTA-Uz-OdV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hF2-gY-K5K"/>
                     <connections>
                         <outlet property="dartkView" destination="fRa-Fl-0yv" id="6JH-11-S5U"/>
                         <outlet property="startButton" destination="7uo-iJ-gYl" id="CwF-Wr-aJg"/>
@@ -354,6 +355,7 @@
                             <constraint firstItem="fBy-0O-jd1" firstAttribute="centerY" secondItem="0QB-N0-YRC" secondAttribute="centerY" id="iIs-Js-QY5"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="z78-3C-DgI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GtL-2o-6Hz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

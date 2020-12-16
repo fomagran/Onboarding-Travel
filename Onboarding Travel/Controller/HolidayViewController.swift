@@ -27,7 +27,8 @@ class HolidayViewController: UIViewController {
         restartVideo()
         observeVideoEvents()
     }
-    
+     
+    //삭제 안해주면 다음 컨트롤러로 이동해도 동영상이 플레이가 진행되어서 메모리가 그대로 유지된다. 반드시 삭제해줘야함
     override func viewWillDisappear(_ animated: Bool) {
         removeVideoEventSubscribers()
         removePlayer()
