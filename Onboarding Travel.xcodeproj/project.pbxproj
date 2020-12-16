@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046744A52589BCE600B25257 /* HolidayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046744A42589BCE600B25257 /* HolidayViewController.swift */; };
+		046744A92589BE2500B25257 /* bg_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 046744A82589BE2500B25257 /* bg_video.mp4 */; };
 		04A3A800257F373800424D71 /* FashionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3A7FF257F373800424D71 /* FashionViewController.swift */; };
 		04A3A804257F3FBF00424D71 /* FashionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3A803257F3FBE00424D71 /* FashionCollectionViewCell.swift */; };
 		04CE0E522574A8F80048846C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE0E512574A8F80048846C /* AppDelegate.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		046744A42589BCE600B25257 /* HolidayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayViewController.swift; sourceTree = "<group>"; };
+		046744A82589BE2500B25257 /* bg_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bg_video.mp4; sourceTree = "<group>"; };
 		04A3A7FF257F373800424D71 /* FashionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FashionViewController.swift; sourceTree = "<group>"; };
 		04A3A803257F3FBE00424D71 /* FashionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FashionCollectionViewCell.swift; sourceTree = "<group>"; };
 		04CE0E4E2574A8F80048846C /* Onboarding Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Onboarding Travel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +83,7 @@
 				04CE0E5A2574A8F90048846C /* Assets.xcassets */,
 				04CE0E5C2574A8F90048846C /* LaunchScreen.storyboard */,
 				04CE0E5F2574A8F90048846C /* Info.plist */,
+				046744A82589BE2500B25257 /* bg_video.mp4 */,
 			);
 			path = "Onboarding Travel";
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 			children = (
 				04A3A7FF257F373800424D71 /* FashionViewController.swift */,
 				04CE0E552574A8F80048846C /* TravelViewController.swift */,
+				046744A42589BCE600B25257 /* HolidayViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -159,6 +165,7 @@
 			files = (
 				04CE0E5E2574A8F90048846C /* LaunchScreen.storyboard in Resources */,
 				04CE0E5B2574A8F90048846C /* Assets.xcassets in Resources */,
+				046744A92589BE2500B25257 /* bg_video.mp4 in Resources */,
 				04CE0E592574A8F80048846C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04CE0E562574A8F80048846C /* TravelViewController.swift in Sources */,
+				046744A52589BCE600B25257 /* HolidayViewController.swift in Sources */,
 				04D2A0DC257DDA8E00FA97B9 /* OnboardingItem.swift in Sources */,
 				04A3A804257F3FBF00424D71 /* FashionCollectionViewCell.swift in Sources */,
 				04CE0E522574A8F80048846C /* AppDelegate.swift in Sources */,
