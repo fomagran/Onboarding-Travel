@@ -369,7 +369,7 @@
                                                     <rect key="frame" x="0.0" y="404" width="404" height="128"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food at its best" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIt-kg-AHf">
-                                                            <rect key="frame" x="36" y="24" width="332" height="80"/>
+                                                            <rect key="frame" x="36" y="0.0" width="332" height="104"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -377,7 +377,7 @@
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstItem="VIt-kg-AHf" firstAttribute="top" secondItem="Uiv-wi-59U" secondAttribute="top" constant="24" id="QDP-Bp-XeY"/>
+                                                        <constraint firstItem="VIt-kg-AHf" firstAttribute="top" secondItem="Uiv-wi-59U" secondAttribute="top" id="QDP-Bp-XeY"/>
                                                         <constraint firstItem="VIt-kg-AHf" firstAttribute="leading" secondItem="Uiv-wi-59U" secondAttribute="leading" constant="36" id="ckJ-Hp-WST"/>
                                                         <constraint firstAttribute="trailing" secondItem="VIt-kg-AHf" secondAttribute="trailing" constant="36" id="oLg-he-Pgg"/>
                                                         <constraint firstAttribute="bottom" secondItem="VIt-kg-AHf" secondAttribute="bottom" constant="24" id="qZy-HW-q2a"/>
@@ -403,6 +403,11 @@
                                                             <state key="normal" title="Get Started">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                             <connections>
                                                                 <action selector="handleStartButton:" destination="wjm-2z-3e4" eventType="touchUpInside" id="HGQ-nK-zkC"/>
                                                             </connections>

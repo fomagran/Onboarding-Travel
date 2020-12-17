@@ -11,6 +11,8 @@ class RestaurantCollectionViewController: UICollectionViewController {
     
     //MARK:Properties
     
+    //컬렉션뷰 컨트롤러로 만들어서 넣진 못하지만 만약 넣을거면 IBOutlet으로 넣어야함.
+    var pageControl:UIPageControl!
     private let items = RestaurantItem.collection
     
     override func viewDidLoad() {
@@ -39,8 +41,22 @@ class RestaurantCollectionViewController: UICollectionViewController {
             let nextItem = indexpath.item + 1
             let nextIndexPath = IndexPath(item: nextItem, section: 0)
             collectionView.scrollToItem(at: nextIndexPath, at: .top, animated: true)
+            //이것도 넣어줘야 작동함.
+//            pageControl.currentPage = nextItem
            
         }
+    }
+    
+    //이것도 마찬가지로 넣진 못하지만 코드만 적어놓음. 페이지 컨트롤 세로로 하는방법
+    private func setUpPageControl() {
+        pageControl.numberOfPages = items.count
+        let angle = CGFloat.pi/2
+        pageControl.transform = CGAffineTransform(rotationAngle: angle)
+    }
+    //페이지 컨트롤 현재 인덱스 적용
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let index = Int(collectionView.contentOffset.y/scrollView.frame.size.height)
+        pageControl.currentPage = index
     }
 
   
