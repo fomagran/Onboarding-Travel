@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043C22D4258B13230068B94B /* OnboardingCheckService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C22D3258B13230068B94B /* OnboardingCheckService.swift */; };
+		043C22D8258B134E0068B94B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C22D7258B134E0068B94B /* LoginViewController.swift */; };
 		046744A52589BCE600B25257 /* HolidayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046744A42589BCE600B25257 /* HolidayViewController.swift */; };
 		046744A92589BE2500B25257 /* bg_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 046744A82589BE2500B25257 /* bg_video.mp4 */; };
 		04A3A800257F373800424D71 /* FashionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3A7FF257F373800424D71 /* FashionViewController.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		043C22D3258B13230068B94B /* OnboardingCheckService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCheckService.swift; sourceTree = "<group>"; };
+		043C22D7258B134E0068B94B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		046744A42589BCE600B25257 /* HolidayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayViewController.swift; sourceTree = "<group>"; };
 		046744A82589BE2500B25257 /* bg_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bg_video.mp4; sourceTree = "<group>"; };
 		04A3A7FF257F373800424D71 /* FashionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FashionViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		043C22D2258B130D0068B94B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				043C22D3258B13230068B94B /* OnboardingCheckService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		04A3A802257F3F9E00424D71 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +102,7 @@
 		04CE0E502574A8F80048846C /* Onboarding Travel */ = {
 			isa = PBXGroup;
 			children = (
+				043C22D2258B130D0068B94B /* Service */,
 				04A3A802257F3F9E00424D71 /* View */,
 				04D2A0E0257DEC4D00FA97B9 /* Controller */,
 				04D2A0DF257DEC1700FA97B9 /* Model */,
@@ -121,6 +134,7 @@
 				04CE0E552574A8F80048846C /* TravelViewController.swift */,
 				046744A42589BCE600B25257 /* HolidayViewController.swift */,
 				04B7A53C258AF5EF00D512C9 /* RestaurantCollectionViewController.swift */,
+				043C22D7258B134E0068B94B /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -262,12 +276,14 @@
 				04CE0E562574A8F80048846C /* TravelViewController.swift in Sources */,
 				046744A52589BCE600B25257 /* HolidayViewController.swift in Sources */,
 				04D2A0DC257DDA8E00FA97B9 /* OnboardingItem.swift in Sources */,
+				043C22D4258B13230068B94B /* OnboardingCheckService.swift in Sources */,
 				04A3A804257F3FBF00424D71 /* FashionCollectionViewCell.swift in Sources */,
 				04CE0E522574A8F80048846C /* AppDelegate.swift in Sources */,
 				04CE0E542574A8F80048846C /* SceneDelegate.swift in Sources */,
 				04B7A540258AF6DF00D512C9 /* RestaurantCollectionViewCell.swift in Sources */,
 				04A3A800257F373800424D71 /* FashionViewController.swift in Sources */,
 				04B7A53D258AF5EF00D512C9 /* RestaurantCollectionViewController.swift in Sources */,
+				043C22D8258B134E0068B94B /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,6 +17,8 @@ class TravelViewController: UIViewController {
     private var currentPage:Int = 0
     
     private var items:[OnboardingItem] = []
+    private let navigationManager = NavigationManager()
+    private let onboardingCheckManager = OnboardingCheckManager()
     
     //MARK:LifeCycle
     override func viewDidLoad() {
@@ -27,10 +29,14 @@ class TravelViewController: UIViewController {
         updateBackgroundImage(index: currentPage)
         setUpGestures()
         setUpView()
-        
+        checkOnboardingSeen()
     }
     
     //MARK:Helpers
+    
+    private func checkOnboardingSeen() {
+        onboardingCheckManager.setOnboardingSeen()
+    }
     
     private func setUpItems() {
         items = OnboardingItem.travelItems
@@ -107,14 +113,7 @@ class TravelViewController: UIViewController {
     }
     
     private func showMainApp() {
-        //MainAppViewController로 이동하기
-        let mainAppViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MainViewController")
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-           let sceneDelegate = windowScene.delegate as? SceneDelegate,
-           let window = sceneDelegate.window {
-            window.rootViewController = mainAppViewController
-            UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
-        }
+        navigationManager.show(screen: .mainApp, controller: self)
     }
     
 

@@ -9,11 +9,14 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    private let onboardingCheckManager = OnboardingCheckManager()
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        //온보딩 리셋시킬때
+//        onboardingCheckManager.resetOnboardingSeen()
         return true
     }
 
