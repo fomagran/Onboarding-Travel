@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,10 @@
 		046744A92589BE2500B25257 /* bg_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 046744A82589BE2500B25257 /* bg_video.mp4 */; };
 		04A3A800257F373800424D71 /* FashionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3A7FF257F373800424D71 /* FashionViewController.swift */; };
 		04A3A804257F3FBF00424D71 /* FashionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3A803257F3FBE00424D71 /* FashionCollectionViewCell.swift */; };
+		04B7A53D258AF5EF00D512C9 /* RestaurantCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7A53C258AF5EF00D512C9 /* RestaurantCollectionViewController.swift */; };
+		04B7A540258AF6DF00D512C9 /* RestaurantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7A53F258AF6DF00D512C9 /* RestaurantCollectionViewCell.swift */; };
+		04B7A548258B01E000D512C9 /* lottieRestaurant.json in Resources */ = {isa = PBXBuildFile; fileRef = 04B7A546258B01E000D512C9 /* lottieRestaurant.json */; };
+		04B7A549258B01E000D512C9 /* lottieDeliveryGuy.json in Resources */ = {isa = PBXBuildFile; fileRef = 04B7A547258B01E000D512C9 /* lottieDeliveryGuy.json */; };
 		04CE0E522574A8F80048846C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE0E512574A8F80048846C /* AppDelegate.swift */; };
 		04CE0E542574A8F80048846C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE0E532574A8F80048846C /* SceneDelegate.swift */; };
 		04CE0E562574A8F80048846C /* TravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE0E552574A8F80048846C /* TravelViewController.swift */; };
@@ -18,6 +22,7 @@
 		04CE0E5B2574A8F90048846C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CE0E5A2574A8F90048846C /* Assets.xcassets */; };
 		04CE0E5E2574A8F90048846C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CE0E5C2574A8F90048846C /* LaunchScreen.storyboard */; };
 		04D2A0DC257DDA8E00FA97B9 /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2A0DB257DDA8E00FA97B9 /* OnboardingItem.swift */; };
+		F6A8A1F73FC85F99EAC6DB54 /* Pods_Onboarding_Travel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238BAAC80F83E9397DBEC255 /* Pods_Onboarding_Travel.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,10 @@
 		046744A82589BE2500B25257 /* bg_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bg_video.mp4; sourceTree = "<group>"; };
 		04A3A7FF257F373800424D71 /* FashionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FashionViewController.swift; sourceTree = "<group>"; };
 		04A3A803257F3FBE00424D71 /* FashionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FashionCollectionViewCell.swift; sourceTree = "<group>"; };
+		04B7A53C258AF5EF00D512C9 /* RestaurantCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCollectionViewController.swift; sourceTree = "<group>"; };
+		04B7A53F258AF6DF00D512C9 /* RestaurantCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCollectionViewCell.swift; sourceTree = "<group>"; };
+		04B7A546258B01E000D512C9 /* lottieRestaurant.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottieRestaurant.json; sourceTree = "<group>"; };
+		04B7A547258B01E000D512C9 /* lottieDeliveryGuy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottieDeliveryGuy.json; sourceTree = "<group>"; };
 		04CE0E4E2574A8F80048846C /* Onboarding Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Onboarding Travel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CE0E512574A8F80048846C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04CE0E532574A8F80048846C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +43,9 @@
 		04CE0E5D2574A8F90048846C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04CE0E5F2574A8F90048846C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04D2A0DB257DDA8E00FA97B9 /* OnboardingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
+		238BAAC80F83E9397DBEC255 /* Pods_Onboarding_Travel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Onboarding_Travel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		253BCD37BECEA0FC7507D696 /* Pods-Onboarding Travel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onboarding Travel.debug.xcconfig"; path = "Target Support Files/Pods-Onboarding Travel/Pods-Onboarding Travel.debug.xcconfig"; sourceTree = "<group>"; };
+		E129ED0C88F160458ABE38E5 /* Pods-Onboarding Travel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onboarding Travel.release.xcconfig"; path = "Target Support Files/Pods-Onboarding Travel/Pods-Onboarding Travel.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A8A1F73FC85F99EAC6DB54 /* Pods_Onboarding_Travel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				04A3A803257F3FBE00424D71 /* FashionCollectionViewCell.swift */,
+				04B7A53F258AF6DF00D512C9 /* RestaurantCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -60,6 +74,8 @@
 			children = (
 				04CE0E502574A8F80048846C /* Onboarding Travel */,
 				04CE0E4F2574A8F80048846C /* Products */,
+				7160BDFF251B80F5F3DCDE92 /* Pods */,
+				CF71C315A55EB211977FC6D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +100,8 @@
 				04CE0E5C2574A8F90048846C /* LaunchScreen.storyboard */,
 				04CE0E5F2574A8F90048846C /* Info.plist */,
 				046744A82589BE2500B25257 /* bg_video.mp4 */,
+				04B7A547258B01E000D512C9 /* lottieDeliveryGuy.json */,
+				04B7A546258B01E000D512C9 /* lottieRestaurant.json */,
 			);
 			path = "Onboarding Travel";
 			sourceTree = "<group>";
@@ -102,8 +120,26 @@
 				04A3A7FF257F373800424D71 /* FashionViewController.swift */,
 				04CE0E552574A8F80048846C /* TravelViewController.swift */,
 				046744A42589BCE600B25257 /* HolidayViewController.swift */,
+				04B7A53C258AF5EF00D512C9 /* RestaurantCollectionViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		7160BDFF251B80F5F3DCDE92 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				253BCD37BECEA0FC7507D696 /* Pods-Onboarding Travel.debug.xcconfig */,
+				E129ED0C88F160458ABE38E5 /* Pods-Onboarding Travel.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CF71C315A55EB211977FC6D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				238BAAC80F83E9397DBEC255 /* Pods_Onboarding_Travel.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04CE0E622574A8F90048846C /* Build configuration list for PBXNativeTarget "Onboarding Travel" */;
 			buildPhases = (
+				43D89C6BC01F11C0D5E8A63F /* [CP] Check Pods Manifest.lock */,
 				04CE0E4A2574A8F80048846C /* Sources */,
 				04CE0E4B2574A8F80048846C /* Frameworks */,
 				04CE0E4C2574A8F80048846C /* Resources */,
+				9C36E48BC34C45F911283C3B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,6 +201,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B7A549258B01E000D512C9 /* lottieDeliveryGuy.json in Resources */,
+				04B7A548258B01E000D512C9 /* lottieRestaurant.json in Resources */,
 				04CE0E5E2574A8F90048846C /* LaunchScreen.storyboard in Resources */,
 				04CE0E5B2574A8F90048846C /* Assets.xcassets in Resources */,
 				046744A92589BE2500B25257 /* bg_video.mp4 in Resources */,
@@ -171,6 +211,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43D89C6BC01F11C0D5E8A63F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Onboarding Travel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C36E48BC34C45F911283C3B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Onboarding Travel/Pods-Onboarding Travel-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Onboarding Travel/Pods-Onboarding Travel-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Onboarding Travel/Pods-Onboarding Travel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04CE0E4A2574A8F80048846C /* Sources */ = {
@@ -183,7 +265,9 @@
 				04A3A804257F3FBF00424D71 /* FashionCollectionViewCell.swift in Sources */,
 				04CE0E522574A8F80048846C /* AppDelegate.swift in Sources */,
 				04CE0E542574A8F80048846C /* SceneDelegate.swift in Sources */,
+				04B7A540258AF6DF00D512C9 /* RestaurantCollectionViewCell.swift in Sources */,
 				04A3A800257F373800424D71 /* FashionViewController.swift in Sources */,
+				04B7A53D258AF5EF00D512C9 /* RestaurantCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +411,7 @@
 		};
 		04CE0E632574A8F90048846C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 253BCD37BECEA0FC7507D696 /* Pods-Onboarding Travel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -339,6 +424,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fomagran.Onboarding-Travel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -346,6 +432,7 @@
 		};
 		04CE0E642574A8F90048846C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E129ED0C88F160458ABE38E5 /* Pods-Onboarding Travel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -358,6 +445,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fomagran.Onboarding-Travel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -27,3 +27,15 @@ struct OnboardingItem {
         .init(title: "Hubert de Givenchy", detail: "The dress must follow the body of a woman, not the body following the shape of the dress.", bgImage: #imageLiteral(resourceName: "imFashion3"))
     ]
 }
+
+struct RestaurantItem {
+    let title:String
+    let animationName:String
+    let buttonColor:UIColor
+    let buttonTitle:String
+    
+    static let collection:[RestaurantItem] = [
+        .init(title: "Get your favorite food delivered to you under 30 minutes anytime", animationName: "lottieDeliveryGuy", buttonColor: .systemYellow, buttonTitle: "Next"),
+            .init(title: "We serve only from choiced restaurants in your area", animationName: "lottieRestaurant", buttonColor: .systemGreen, buttonTitle: "Order Now")
+    ]
+}
